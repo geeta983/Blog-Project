@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+   
+
+<% for(var i=posts.length-1;i>=0;i--){ %>
+<div class="container" id="blogs">
+        <h1><%= posts[i].postName%>   </h1>
+        <small ><%=posts[i].postbody.substring(0,100) %>...</small>
+       
+     <a href="/posts/<%= posts[i]._id %> " >Read more</a>
+    </div>
+<% }; %> 
+
+  
+   
+<%- include('partials/footer'); -%> 
+   
